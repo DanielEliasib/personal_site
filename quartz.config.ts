@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "fractal strand",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -28,26 +28,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "#ffffff",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          dark: "#2d2d2d",
+          secondary: "#33444c",
+          tertiary: "#CCB893",
+          highlight: "#7895A326",
+          textHighlight: "#E17F9950",
         },
         darkMode: {
-          light: "#161618",
+          light: "#0F0F0F",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          secondary: "#CCB893",
+          tertiary: "#33444c",
+          highlight: "#7895A326",
+          textHighlight: "#E17F9950",
         },
       },
     },

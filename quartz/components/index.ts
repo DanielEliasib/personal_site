@@ -44,4 +44,5 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  ProjectCard
 }

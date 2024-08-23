@@ -1,3 +1,104 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* custom-styles.css */
+.responsive-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.vertical-container {
+  flex: 1 1 45%; /* Adjust the width for larger screens */
+  margin: 10px;
+}
+.vertical-image {
+  width: 90%;
+  height: auto;
+}
+.responsive-image {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+.content {
+  flex: 1;
+  min-width: 200px;
+  align-self: flex-start;
+}
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.tag {
+  background-color: var(--gray);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+.flex-item-fixed {
+  flex: 0 0 auto;
+}
+.flex-item-grow {
+  flex: 1;
+  margin-left: 20px;
+}
+.profile-img {
+  width: 200px;
+}
+
+.reset-external-link {
+  all: unset; /* Reset all styles */
+  display: inline; /* Ensure it remains an inline element */
+  cursor: pointer; /* Maintain pointer cursor for links */
+  
+  /* Remove any external icon added via pseudo-elements */
+  &::after {
+    content: none;
+  }
+  
+  /* Remove any external icon if it's a nested element */
+  .external-icon {
+    display: none;
+  }
+
+  /* Ensure the image inside the link is displayed correctly */
+  img {
+    vertical-align: middle; /* Align the image vertically in the middle */
+  }
+}
+
+@media (max-width: 600px) {
+  .responsive-container {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .responsive-image {
+    width: 100%;
+    margin-right: 0;
+  }
+  .vertical-container {
+    flex: 1 1 100%; /* Take the entire width on mobile */
+  }
+
+  .flex-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+  .flex-item-fixed,
+  .flex-item-grow {
+    width: 100%; /* Make both items take full width */
+    margin-left: 0; /* Remove left margin */
+  }
+  .profile-img {
+    width: 100%; /* Make image take full width */
+  }
+}
